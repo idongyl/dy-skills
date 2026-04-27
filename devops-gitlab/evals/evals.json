@@ -1,0 +1,20 @@
+{
+  "skill_name": "devops-gitlab",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "使用 devops-gitlab skill 拉取仓库 https://gitlab.com/gitlab-org/gitlab-shell 的上下文，分析其依赖文件",
+      "expected_output": "JSON 格式包含 file_list 和 dependencies (package.json/requirements.txt 等内容)"
+    },
+    {
+      "id": 2,
+      "prompt": "使用 devops-gitlab skill 推送部署文件到 https://gitlab.com/myuser/test-repo，dockerfile 内容为 'FROM python:3.9\\nCMD [\"python\", \"app.py\"]'，manual 为 '部署指南'",
+      "expected_output": "JSON 格式包含 success=true, branch, web_url"
+    },
+    {
+      "id": 3,
+      "prompt": "使用 devops-gitlab skill 拉取 https://gitlab.com/dongtest/copaw-project 的文件树并检查是否有 package.json 或 requirements.txt",
+      "expected_output": "返回文件列表和存在的依赖文件内容"
+    }
+  ]
+}
